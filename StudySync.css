@@ -1,0 +1,558 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+#header-section{
+    background-color: rgb(222, 235, 231);
+    display: flex;
+    justify-content: space-around;
+    padding: 1.2rem;
+}
+
+#icon-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+#icon-section a img{
+    height: 1.9rem;
+}
+#icon-section a{
+    text-decoration: none;
+}
+#icon-section h1{
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(58, 51, 51);
+}
+#icon-section h1:hover{
+    color: rgb(90, 90, 210);
+}
+#nav-section{
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+@media  screen and (min-width:930px){
+    #nav-section{
+        display: flex;
+    }
+} 
+    
+
+#nav-list{
+    display: flex;
+}
+#nav-list li{
+    list-style: none;
+}
+
+#nav-list a{
+    text-decoration: none;
+    margin: 1.1rem;
+    font-size: 23px;
+    font-weight: 600;
+    color: rgb(105, 48, 48);
+}
+
+#nav-list a:hover{
+    color: rgb(242, 5, 5);
+}
+
+#contact-us{
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(110, 110, 230);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+
+    transition: all 0.25s linear;
+}
+
+@media  screen and (min-width:930px) {
+    #contact-us{
+        display: flex;
+    }
+}
+#contact-us a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+#contact-us:hover{
+    transform: scale(1.2);
+    background-color: rgb(60, 60, 167);
+    a{
+        color: rgb(251, 3, 164);
+    }
+}
+
+#menu-button{
+    display: none;
+}
+#menu-button img{
+    height: 2.2rem;   
+}
+
+@media screen and (max-width:930px){
+    #menu-button{
+        display: block;
+    }
+}
+
+/* hero section */
+
+#hero-section{
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1.5rem 0rem;
+}
+
+@media screen and (min-width:930px) {
+    #hero-section{
+        display: flex;  
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+
+#left-part{
+    padding: 2rem;
+
+    animation: slideFromLeft 1s linear forwards;
+    opacity: 0;
+}
+/* forward ka matlab animation complete hone ke bad apni 100% wali state ko maintain rakhega .aisa nahi karne par animation complete hone ke bad fir se 0% wali state me aajayega*/
+@keyframes slideFromLeft {
+    0%{
+        opacity: 0;
+        transform: translatex(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translatex(0);
+    }
+}
+
+#right-part{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+#hero-label{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgb(60, 60, 217);
+    padding: 0.5rem;
+
+    
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    animation: typing 3s linear infinite;
+}
+
+@keyframes typing {
+    from{
+        width: 0;
+    }
+    t0{
+        width: 100%;
+    }
+    
+}
+
+
+#hero-title{
+    font-size: 2.35rem;
+    font-weight: 700;
+    color: rgb(52, 44, 44);
+    padding: 0.5rem;
+}
+
+#hero-description{
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    color: rgb(28, 17, 17);
+}
+#button-group{
+    padding: 0.5rem;
+}
+#button-group #start{
+    background-color: rgb(91, 91, 223);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+}
+#button-group #start:hover{
+    background-color: blue;
+}
+
+#button-group #take-tour{
+    background-color: rgb(79, 63, 63);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+}
+#button-group #take-tour:hover{
+    background-color: rgb(31, 26, 26);
+}
+
+#right-part img{
+    width: 40vw;
+    border-radius: 10px;
+    box-shadow: 10px 10px 6px rgb(46, 75, 75);
+}
+
+/* trusted container */
+
+#trusted-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    animation: slideFromLeft 1s linear forwards;
+}
+
+#trusted-container h2{
+    text-align: center;
+    margin-bottom: 1.3rem;
+    font-size: 2rem;
+    color: rgb(196, 14, 14);
+}
+#trusted-company{
+    background-color: rgba(194, 192, 192, 0.639);
+    border-radius: 10px;
+    padding: 1rem;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+@media screen and (max-width:930px){
+    #trusted-company{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.company-logo{
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    
+}
+.company-logo img{
+    height: 2.2rem;
+}
+.company-logo p{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgb(80, 76, 76);
+}
+
+
+/* card section */
+#card-section{
+    margin:1.7rem 0rem;
+    background-color: rgb(248, 224, 224);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#card-heading{
+    text-align: center;
+}
+#card-heading h2{
+    font-size: 2.5rem;
+    padding: 1.2rem;
+    color: rgb(7, 96, 96);
+}
+#card-heading p{
+    padding: 0 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgb(48, 42, 42);
+}
+#card-info{
+    padding: 2.2rem;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width:930px) {
+    #card-info{
+        grid-template-columns:1fr ;
+    }
+}
+
+.card-details{
+    padding: 2.5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 4rem;
+    background-color: white;
+    border-radius: 50%;
+}
+.card-details img{
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.card-details h3{
+    padding:1rem;
+    font-size: 1.7rem;
+    color: white
+}
+.card-details p{
+    font-size: 1.2rem;
+    color: white;
+}
+#card1{
+    background-color: rgb(80, 80, 191);
+}
+#card2{
+    background-color: rgb(215, 56, 56);
+}
+#card3{
+    background-color: rgb(202, 202, 12);
+}
+#card4{
+    background-color: rgb(52, 159, 192);
+}
+#card5{
+    background-color: rgb(23, 118, 23);
+}
+#card6{
+    background-color: rgb(121, 7, 227);
+}
+
+/* testimonial section */
+
+#testimonial-section{
+    margin: 2rem 1.8rem;
+}
+#testimonial-section h2{
+    margin: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.3rem;
+    color: rgb(55, 26, 26);
+}
+
+#testimonial-content{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width:930px) {
+    #testimonial-content{
+        grid-template-columns: 1fr;
+    }
+}
+.testimonial-box{
+    border: 1.5px solid black;
+    border-radius: 10px;
+    padding: 0.5rem;
+
+    transition: all 0.35s linear;
+}
+
+.testimonial-box:hover{
+    transform: scale(1.04);
+    border: 1.5px solid rgb(27, 27, 224);
+    box-shadow: 2px 2px 5px blue;
+}
+.testimonial-box .testi-thought{
+    font-size: 1rem;
+    text-align: center;
+    color: rgb(52, 48, 48);
+}
+
+.testi-image{
+    display: flex;
+    justify-content: center;
+    margin: 0.8rem;
+}
+
+.testimonial-box img{
+    height: 4rem;
+}
+.testimonial-box h3 {
+    text-align: center;
+    font-size: 1rem;
+    color: rgb(37, 37, 218);
+}
+
+.testimonial-box .testi-name{
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 0.3rem;
+    color: rgb(244, 72, 4);
+}
+
+/* news section */
+
+#news-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#news-letter{
+    display: flex;
+    max-width: 80%;
+    margin: 1rem 0;
+}
+
+@media screen and (max-width:930px){
+
+    #left-newsLetter img{
+        display: none;
+    }
+    #right-newsLetter{
+        width: 100vw;
+    }
+}
+
+#left-newsLetter{
+    display: flex;
+    justify-content: center;
+}
+#left-newsLetter img{
+    height: 18rem;
+}
+
+#right-newsLetter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: rgb(208, 208, 207);
+}
+#news-heading h2{
+    font-size: 2rem;
+    color: rgb(139, 5, 151);
+}
+#news-heading p{
+    font-size: 1rem;
+}
+
+#news-form  input{
+    padding-left: 0.7rem;
+}
+#news-form button{
+    margin-top: 0.5rem;
+    padding: 0.1rem 0.7rem;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(77, 77, 241);
+    color: white;
+}
+#news-paragrapgh{
+    font-size: 1rem;
+}
+.news-anchor{
+    color: rgb(66, 66, 238);
+}
+
+/* footer section */
+
+#footer-part{
+    display: flex;
+    justify-content: space-around;
+    margin: 1.5rem 0 4rem 0;
+}
+@media screen and (max-width:1060px){
+    #footer-part{
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+#left-foot-heading{
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+#left-foot-heading img{
+    height: 2rem;
+}
+#left-foot-para{
+    color: rgb(93, 92, 92);
+    padding-bottom: 1rem;
+}
+#left-foot-image img{
+    padding-right: 1rem;
+    height: 2rem;
+}
+#right-footer{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+@media screen and (max-width:750px) {
+    #right-footer{
+        grid-template-columns: 1fr 1fr;
+    }
+    #footer-footer{
+        text-align: center;
+    }
+}
+.right-foot-content{
+    display: flex;
+    gap: 0.7rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right-foot-content h3{
+    font-size: 1.2rem;
+}
+.right-foot-content a{
+    text-decoration: none;
+    color: rgb(95, 94, 94);
+    font-size: 0.9rem;
+}
+
+#footer-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
